@@ -1,0 +1,6 @@
+[submodule "fx-back"]
+	path = fx-back
+	url = https://github.com/joshue000/fx-back.git
+[submodule "fx-front"]
+	path = fx-front
+	url = https://github.com/joshue000/fx-front.git
