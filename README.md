@@ -4,6 +4,19 @@ Monorepo deployment setup for the **FXReplayChallenge** project. Orchestrates th
 
 ---
 
+## Live Demo
+
+| Service    | URL                                              |
+|------------|--------------------------------------------------|
+| Frontend   | http://3.15.46.220:4200                          |
+| API        | http://3.15.46.220:3000                          |
+| Swagger UI | http://3.15.46.220:3000/api/v1/docs              |
+| Metrics    | http://3.15.46.220:3000/metrics                  |
+| Prometheus | http://3.15.46.220:9090                          |
+| Grafana    | http://3.15.46.220:3100 (admin / admin)          |
+
+---
+
 ## Project Overview
 
 FXReplayChallenge is a trade order management system. It allows users to create, list, update, and soft-delete trade orders across supported currency pairs (`BTCUSD`, `EURUSD`, `ETHUSD`), enforcing a price policy based on order type and side.
@@ -46,25 +59,32 @@ fx-deploy/
 
 ## Quick Start
 
-### 1. Initialize submodules (first time only)
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/joshue000/fx-deploy.git
+cd fx-deploy
+```
+
+### 2. Initialize submodules (first time only)
 
 ```bash
 git submodule update --init --recursive
 ```
 
-### 2. Grant execute permissions to the scripts (first time only)
+### 3. Grant execute permissions to the scripts (first time only)
 
 ```bash
 chmod +x start.sh stop.sh
 ```
 
-### 3. Install backend dependencies (required for the DB seed step)
+### 4. Install backend dependencies (required for the DB seed step)
 
 ```bash
 cd fx-back && npm install && cd ..
 ```
 
-### 4. Configure environment
+### 5. Configure environment
 
 ```bash
 cp .env.example .env
@@ -73,7 +93,7 @@ cp .env.example .env
 
 > The default values work out of the box — no changes required for a local run.
 
-### 5. Start the stack
+### 6. Start the stack
 
 ```bash
 ./start.sh
@@ -86,7 +106,7 @@ This will:
 - Seed the database with 25 sample trade orders
 - Print all accessible URLs
 
-### 6. Stop the stack
+### 7. Stop the stack
 
 ```bash
 ./stop.sh
