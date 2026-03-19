@@ -1,9 +1,11 @@
 .env
 *.pem
 
-# Terraform
-terraform/
-terraform.tfstate
+# Terraform — sensitive and generated files
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/terraform.tfvars
 
 CI_CD.md
 CODE_REVIEW.md
