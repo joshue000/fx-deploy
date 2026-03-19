@@ -4,3 +4,6 @@
 # Terraform
 terraform/
 terraform.tfstate
+
+CI_CD.md
+CODE_REVIEW.md
